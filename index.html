@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta Rápida: PS5 Slim y Accesorios - Luque, PY</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Fondo oscuro tipo gamer */
+        }
+        .tab-button.active {
+            background-color: #4f46e5; /* Índigo */
+            color: #ffffff;
+            border-bottom: 4px solid #8b5cf6; /* Morado neón */
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.4);
+        }
+        /* Oculta las barras de desplazamiento en el contenedor del carrusel */
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+        .carousel-slide {
+            flex: 0 0 100%; /* Cada slide ocupa el 100% del contenedor */
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto">
+
+        <!-- Encabezado y Título -->
+        <header class="text-center py-6 mb-8 bg-gray-800 rounded-xl shadow-2xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight">
+                <span class="text-indigo-400">🔥 PS5 SLIM DIGITAL:</span> ¡Setup Completo y Garantizado!
+            </h1>
+            <p class="mt-2 text-lg text-gray-300">🎮 Todo en excelente estado, listo para la próxima generación.</p>
+        </header>
+
+        <!-- Sistema de Pestañas -->
+        <div class="mb-8">
+            <div class="flex border-b border-gray-700">
+                <button id="tab-individual-btn" onclick="showTab('individual')"
+                    class="tab-button active flex-1 py-3 px-4 text-center text-lg font-semibold text-gray-300 rounded-tl-lg hover:bg-gray-700 transition duration-200">
+                    Productos Individuales
+                </button>
+                <button id="tab-combo-btn" onclick="showTab('combo')"
+                    class="tab-button flex-1 py-3 px-4 text-center text-lg font-semibold text-gray-300 rounded-tr-lg hover:bg-gray-700 transition duration-200">
+                    Combo Completo (Súper Oferta!)
+                </button>
+            </div>
+        </div>
+
+        <!-- Contenido de Pestañas -->
+        <div id="tab-individual-content" class="tab-content grid md:grid-cols-3 gap-8">
+
+            <!-- Card 1: PS5 Slim DIGITAL EDITION -->
+            <div class="card bg-gray-800 p-6 rounded-xl shadow-lg border border-indigo-600 flex flex-col justify-between h-full">
+                <h2 class="text-3xl font-bold text-indigo-400 mb-4">PS5 Slim Digital 1TB</h2>
+                
+                <!-- INICIO: CARRUSEL PS5 SLIM -->
+                <div id="carousel-ps5" class="carousel-container mb-4 rounded-lg bg-gray-700">
+                    <div class="carousel-track flex">
+                        <!-- IMAGEN 1 DE 3 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 1 (Consola) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/PS5img/IMG_20251015_223617.jpg?raw=true" alt="PS5 Slim Digital Edition (con DualSense original foto 1)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                        <!-- IMAGEN 2 DE 3 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 2 (Detalle) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/PS5img/IMG_20251015_223648.jpg?raw=true" alt="PS5 Slim Digital Edition (con DualSense original foto 2)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                        <!-- IMAGEN 3 DE 3 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 3 (Caja) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/PS5img/IMG_20251015_223759.jpg?raw=true" alt="PS5 Slim Digital Edition (con DualSense original foto 3)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <!-- Controles -->
+                    <button onclick="moveSlide('ps5', -1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-10">
+                        &#10094;
+                    </button>
+                    <button onclick="moveSlide('ps5', 1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-10">
+                        &#10095;
+                    </button>
+                </div>
+                <!-- FIN: CARRUSEL PS5 SLIM -->
+
+                <p class="text-gray-300 mb-4 text-sm">¡Llevate la PS5 Slim (Digital Edition, Sin Lector) prácticamente nueva! Mínimo uso, siempre cuidada. Incluye caja original y 1 Control DualSense (Blanco).</p>
+                <div class="text-center mt-auto">
+                    <p class="text-2xl font-extrabold text-white">Precio: <span class="text-green-400">₲3.500.000</span></p>
+                    <p class="text-xs text-gray-400 mt-1">Pago: Efectivo o Transferencia bancaria.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: DualSense Adicional (Color Negro) -->
+            <div class="card bg-gray-800 p-6 rounded-xl shadow-lg border border-red-600 flex flex-col justify-between h-full">
+                <h2 class="text-3xl font-bold text-red-400 mb-4">Control DualSense Midnight Black</h2>
+                
+                <!-- INICIO: CARRUSEL DUALSENSE NEGRO -->
+                <div id="carousel-dualblack" class="carousel-container mb-4 rounded-lg bg-gray-700">
+                    <div class="carousel-track flex">
+                        <!-- IMAGEN 1 DE 3 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 1 (Mando completo) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/DualSense/IMG_20251015_215251.jpg?raw=true" alt="DualSense Midnight Black (vista frontal)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                        <!-- IMAGEN 2 DE 3 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 2 (Detalle sticks) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/DualSense/IMG_20251015_215316.jpg?raw=true" alt="DualSense Midnight Black (vista de sticks y botones desde esquina superior derecha)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                        <!-- IMAGEN 3 DE 3 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 3 (Vista trasera) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/DualSense/IMG_20251015_215349.jpg?raw=true" alt="DualSense Midnight Black (vista trasera del modelo)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <!-- Controles -->
+                    <button onclick="moveSlide('dualblack', -1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-10">
+                        &#10094;
+                    </button>
+                    <button onclick="moveSlide('dualblack', 1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-10">
+                        &#10095;
+                    </button>
+                </div>
+                <!-- FIN: CARRUSEL DUALSENSE NEGRO -->
+
+                <p class="text-gray-300 mb-4 text-sm">Control DualSense original en su versión Midnight Black. Poco uso, sin *drift* ni fallas. ¡Garantizado para jugar con tu kp!</p>
+                <div class="text-center mt-auto">
+                    <p class="text-2xl font-extrabold text-white">Precio: <span class="text-green-400">₲400.000</span></p>
+                    <p class="text-xs text-gray-400 mt-1">Pago: Efectivo o Transferencia bancaria.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Pulse 3D Headset (Precio y Color Negro) -->
+            <div class="card bg-gray-800 p-6 rounded-xl shadow-lg border border-green-600 flex flex-col justify-between h-full">
+                <h2 class="text-3xl font-bold text-green-400 mb-4">Auriculares Pulse 3D</h2>
+                
+                <!-- INICIO: CARRUSEL PULSE 3D -->
+                <div id="carousel-pulse" class="carousel-container mb-4 rounded-lg bg-gray-700">
+                    <div class="carousel-track flex">
+                        <!-- IMAGEN 1 DE 3 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 1 (Auriculares) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/Pulse3D/IMG_20251016_005442.jpg?raw=true" alt="Pulse 3D Headset (vista principal)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                        <!-- IMAGEN 2 DE 3 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 2 (Controles) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/Pulse3D/IMG_20251016_004736.jpg?raw=true" alt="Pulse 3D Headset (vista trasera)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                        <!-- IMAGEN 3 DE 3 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 3 (Dongle) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/Pulse3D/IMG_20251016_004810.jpg?raw=true" alt="Pulse 3D Headset (estado de la tela)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <!-- Controles -->
+                    <button onclick="moveSlide('pulse', -1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-10">
+                        &#10094;
+                    </button>
+                    <button onclick="moveSlide('pulse', 1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-10">
+                        &#10095;
+                    </button>
+                </div>
+                <!-- FIN: CARRUSEL PULSE 3D -->
+
+                <p class="text-gray-300 mb-4 text-sm">La mejor experiencia de audio para PS5. Auriculares en la versión Midnight Black, sonido 3D oficial, inalámbricos y cómodos. Incluye su dongle USB, cable tipo C y cable auxiliar 3,5mm.</p>
+                <div class="text-center mt-auto">
+                    <p class="text-2xl font-extrabold text-white">Precio: <span class="text-green-400">₲400.000</span></p>
+                    <p class="text-xs text-gray-400 mt-1">Pago: Efectivo o Transferencia bancaria.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tab-combo-content" class="tab-content hidden">
+            <!-- Card Combo Completo -->
+            <div class="bg-gray-900 p-8 rounded-xl shadow-2xl border-4 border-purple-500 card">
+                <h2 class="text-4xl font-extrabold text-purple-400 mb-6 text-center">🏆 ¡OFERTA COMBO COMPLETO!</h2>
+                
+                <!-- INICIO: CARRUSEL COMBO COMPLETO -->
+                <div id="carousel-combo" class="carousel-container mb-6 rounded-lg bg-gray-700">
+                    <div class="carousel-track flex">
+                        <!-- IMAGEN 1 DE 4 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 1 (Todos los artículos juntos) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/ComboNextGen/IMG_20251015_215708.jpg?raw=true" alt="Combo Completo de PS5 (todos los artículos)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                        <!-- IMAGEN 2 DE 4 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 2 (Consola y mandos) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/ComboNextGen/IMG_20251016_010449.jpg?raw=true" alt="Combo Completo (consola y mandos)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                        <!-- IMAGEN 3 DE 4 -->
+                        <div class="carousel-slide">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 3 (Auriculares y mandos) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/ComboNextGen/IMG_20251016_005442.jpg?raw=true" alt="Combo Completo (detalle de accesorios)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                        <!-- IMAGEN 4 DE 4 -->
+                        <div class="carousel-slide flex items-center justify-center">
+                            <!-- REEMPLAZAR 'src' con la URL de la foto 4 (La caja y la consola) -->
+                            <img src="https://github.com/DarkNini/Ps5/blob/main/ComboNextGen/IMG_20251015_215720.jpg?raw=true" alt="Combo Completo (todos los articulos)" class="w-full h-auto object-cover rounded-lg">
+                        </div>
+                    </div>
+                    <!-- Controles -->
+                    <button onclick="moveSlide('combo', -1)" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-10">
+                        &#10094;
+                    </button>
+                    <button onclick="moveSlide('combo', 1)" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75 transition z-10">
+                        &#10095;
+                    </button>
+                </div>
+                <!-- FIN: CARRUSEL COMBO COMPLETO -->
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-gray-300 text-xl font-semibold mb-3">El Paquete Incluye:</p>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 ml-4">
+                            <li><span class="font-bold text-white">Consola PS5 Slim 1TB</span> (Digital Edition, Sin Lector) - Caja original.</li>
+                            <!-- ACTUALIZADO: Múltiples colores de mando -->
+                            <li><span class="font-bold text-white">Dos (2) Controles DualSense</span> originales (<span class="text-blue-200">1 Blanco (Incluido de la caja)</span> y <span class="text-gray-400">1 Negro (Midnight Black)</span>).</li>
+                            <li><span class="font-bold text-white">Auriculares Pulse 3D</span> (Midnight Black, Audio 3D).</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="text-gray-300 text-xl font-semibold mb-3">Beneficio Clave:</p>
+                        <p class="text-white text-lg leading-relaxed bg-indigo-900/50 p-3 rounded-lg border-l-4 border-purple-400">
+                            Todo en estado <span class="font-extrabold text-yellow-300">IMPECABLE</span>. Es la experiencia completa, lista para usar, ahorrando considerablemente sobre el precio total individual de ₲4.300.000.
+                        </p>
+                    </div>
+                        
+                    
+
+                </div>
+
+                <div class="mt-6 text-center">
+                        <p class="text-xl text-gray-400 line-through">Precio Normal (Individual): ₲4.300.000</p>
+                        <p class="text-5xl font-extrabold text-green-400 mt-2 animate-pulse">
+                            ¡Llevá Todo por Solo: ₲4.000.000!
+                        </p>
+                        <p class="text-lg text-red-400 font-bold mt-1">🚨 ¡Ahorrá ₲300.000 de inmediato!</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Call to Action y Ubicación (Footer) -->
+        <footer class="mt-12 py-6 text-center bg-gray-800 rounded-xl shadow-2xl border-t border-gray-700">
+            <h3 class="text-2xl font-extrabold text-white mb-4">📞 ¡CONTACTO RÁPIDO VÍA WHATSAPP!</h3>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
+                <!-- Phone and Link - Simplificado sin QR -->
+                <div class="text-center">
+                    <p class="text-3xl font-extrabold text-green-400 mb-4">
+                        <span class="text-white">Teléfono:</span> +595 974 564 640
+                    </p>
+                    <!-- He usado el link que proporcionaste, aunque sea un link de QR, dirige al chat de WhatsApp. -->
+                    <a href="https://wa.me/qr/IVN33OFUEOB7M1" target="_blank" 
+                       class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-xl transition duration-200 shadow-lg text-xl">
+                        Mandar WhatsApp Directo Ahora
+                    </a>
+                </div>
+            </div>
+            
+            <p class="text-lg text-indigo-300 mb-4">Priorizo la venta del combo y el retiro inmediato. Solo Efectivo/Transferencia.</p>
+            
+            <!-- Ubicación con Link -->
+            <div class="p-3 bg-gray-900 inline-block rounded-lg hover:bg-gray-700 transition duration-200">
+                <p class="text-2xl font-extrabold text-gray-100">
+                    📍 Ubicación: 
+                    <a href="https://maps.app.goo.gl/jQf1BS6hyGFfZZy1A" target="_blank" class="text-purple-400 hover:text-purple-300 underline">
+                        Luque, Paraguay.
+                    </a>
+                </p>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">Motivo de venta: Necesidad de efectivo. Solo artículos serios, por favor.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Función para manejar el cambio de pestañas
+        function showTab(tabName) {
+            // Ocultar todos los contenidos
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Remover la clase 'active' de todos los botones
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Mostrar el contenido seleccionado
+            document.getElementById('tab-' + tabName + '-content').classList.remove('hidden');
+
+            // Activar el botón seleccionado
+            document.getElementById('tab-' + tabName + '-btn').classList.add('active');
+        }
+
+        // --- Lógica del Carrusel (Slider) ---
+        const slides = {
+            'ps5': 3, // Total de imágenes para PS5
+            'dualblack': 3, // Total de imágenes para DualSense Negro
+            'pulse': 3, // Total de imágenes para Pulse 3D
+            'combo': 4 // Total de imágenes para Combo
+        };
+        let currentSlideIndex = {
+            'ps5': 0,
+            'dualblack': 0,
+            'pulse': 0,
+            'combo': 0
+        };
+
+        function updateCarousel(id) {
+            const track = document.querySelector(`#carousel-${id} .carousel-track`);
+            const index = currentSlideIndex[id];
+            const slideWidth = track.querySelector('.carousel-slide').offsetWidth;
+            
+            // Mueve la pista (track) horizontalmente
+            track.style.transform = `translateX(-${index * slideWidth}px)`;
+        }
+
+        function moveSlide(id, direction) {
+            let index = currentSlideIndex[id];
+            const max = slides[id];
+
+            // Calcula el nuevo índice, asegurando que se mantenga dentro de los límites
+            index = (index + direction + max) % max;
+            currentSlideIndex[id] = index;
+            
+            // Llama a la función de actualización
+            updateCarousel(id);
+        }
+        
+        // Inicializar carruseles al cargar el DOM
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('individual');
+            // Asegura que todos los carruseles se inicialicen al estado 0
+            Object.keys(slides).forEach(id => {
+                updateCarousel(id);
+            });
+        });
+
+        // Asegurar que el carrusel se recalcule si se cambia el tamaño de la ventana (responsividad)
+        window.addEventListener('resize', () => {
+            Object.keys(slides).forEach(id => {
+                updateCarousel(id);
+            });
+        });
+    </script>
+
+</body>
+</html>
